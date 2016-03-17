@@ -106,7 +106,7 @@ function attemptRegistration(){
 			}
 		};
 									
-		xmlhttp.open("post", "register.php", true);
+		xmlhttp.open("post", "./php/register.php", true);
 		xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");			
 		xmlhttp.send(ajaxPost);
 	}				

@@ -1,5 +1,5 @@
 <?php
-	require_once "./db_password.php";	
+	require_once "db_password.php";	
 
 	session_start();
 	

@@ -37,7 +37,7 @@ function attemptLogin(){
 			}
 		};
 									
-		xmlhttp.open("post", "login.php", true);
+		xmlhttp.open("post", "./php/login.php", true);
 		xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");			
 		xmlhttp.send(ajaxPost);
 	}
@@ -46,7 +46,7 @@ function attemptLogin(){
 function logout(){
 	var xmlhttp = new XMLHttpRequest();
 	
-	xmlhttp.open("post", "logout.php", true);
+	xmlhttp.open("post", "./php/logout.php", true);
 	
 	xmlhttp.onreadystatechange = function(){
 		if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
@@ -70,7 +70,7 @@ function checkLoginStatus(){
 	
 	// Check login status
 	var xhr = new XMLHttpRequest();
-	xhr.open("post", "check_login.php", true);
+	xhr.open("post", "./php/check_login.php", true);
 	xhr.onreadystatechange = function(){
 		if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
 			sessionUser = xhr.responseText;

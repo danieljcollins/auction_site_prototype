@@ -1,6 +1,6 @@
 <?php
 //Connect with Database to validate user input for login
-require_once "./db_password.php";
+require_once "db_password.php";
 //include "db_password.php";
 
 //$username = $password = "";

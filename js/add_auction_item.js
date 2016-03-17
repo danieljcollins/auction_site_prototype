@@ -104,7 +104,7 @@ function addImage(){
 			}
 		};
 							
-		xmlhttp.open("POST", "add_item.php");
+		xmlhttp.open("POST", "./php/add_item.php");
 		//xmlhttp.setRequestHeader("Content-Type", "multipart/form-data");					
 		xmlhttp.send(formData);
 	} // end of readyToSend block

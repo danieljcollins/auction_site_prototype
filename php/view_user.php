@@ -1,6 +1,6 @@
 <?php
 	
-	require_once "./db_password.php";	
+	require_once "db_password.php";	
 
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
 		$userId = $_POST["userId"];

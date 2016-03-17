@@ -34,7 +34,7 @@ function searchItems(searchType){
 	console.log(ajaxString);
 	
 	var xhr = new XMLHttpRequest();
-	xhr.open("post","search_items.php", true);
+	xhr.open("post","./php/search_items.php", true);
 	xhr.onreadystatechange = function(){
 		if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
 			

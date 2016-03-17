@@ -19,7 +19,7 @@ function loadItem(){
 	
 	<!-- body onload Javascript for loading the auction item that corresponds to the auction item ID sent in via cookie by the home.html -->				
 	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open("post", "load_auction_item.php", true);
+	xmlhttp.open("post", "./php/load_auction_item.php", true);
 	
 	var temp = "itemId=";
 	var ajaxPost = temp.concat(itemId);
@@ -54,7 +54,7 @@ function placeBid(){
 		
 		var xhr = new XMLHttpRequest();
 		
-		xhr.open("post", "place_bid.php", true);
+		xhr.open("post", "./php/place_bid.php", true);
 		
 		xhr.onreadystatechange = function(){
 			if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){

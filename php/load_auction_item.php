@@ -1,6 +1,6 @@
 <?php
 	//require_once "db_password.php";
-	include "./db_password.php";
+	include "db_password.php";
 //Connect with Database to get AuctionItem information, for a single item
 
 // This will store the item id if we are looking for one id specifically

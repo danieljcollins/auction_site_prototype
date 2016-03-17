@@ -3,7 +3,7 @@
 function mainPageImageLoad(){
 	
 	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open("post", "load_auction_items.php", true);
+	xmlhttp.open("post", "./php/load_auction_items.php", true);
 	xmlhttp.onreadystatechange = function(){
 		if(xmlhttp.readyState == XMLHttpRequest.DONE && xmlhttp.status == 200){ //(xmlhttp.readyState == 4 && xmlhttp.status == 200){
 			queryResultJSON = JSON.parse(xmlhttp.responseText);

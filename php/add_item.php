@@ -1,6 +1,6 @@
 <?php
 
-require_once "./db_password.php";
+require_once "db_password.php";
 
 //error reporting features (very useful)
 //ini_set('display_errors',1);
@@ -55,7 +55,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	//var_dump($file_type_array);
 	
 	//work on uploading the file to the server now
-	$target_dir = 'uploads';
+	$target_dir = '../uploads';
+	$folder_path = 'uploads';	//for easy storage in database later without string manipulation
 	$target_file = $_FILES["photos"]["tmp_name"][0]; //basename($_FILES["photos"]["name"][0]); //"{$target_dir}{$_FILES["photos"]["name"][0]}";	//basename($_FILES["photos"]["name"]);
 	$file_name = $_FILES["photos"]["name"][0];
 	$uploadOk = 1;
@@ -117,7 +118,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		
 		$pdo->beginTransaction();
 		
-		$pdo->exec("INSERT INTO AuctionItems (itemName, itemDescription, listPrice, itemImage, userId) VALUES ('{$data_array["itemNameInput"]}', '{$data_array["itemDescriptionInput"]}', '{$data_array["listPriceInput"]}', '{$target_dir}/{$file_name}', '{$userResult["userId"]}')");
+		$pdo->exec("INSERT INTO AuctionItems (itemName, itemDescription, listPrice, itemImage, userId) VALUES ('{$data_array["itemNameInput"]}', '{$data_array["itemDescriptionInput"]}', '{$data_array["listPriceInput"]}', '{$folder_path}/{$file_name}', '{$userResult["userId"]}')");
 		
 		$pdo->commit();
 		

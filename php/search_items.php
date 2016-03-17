@@ -1,5 +1,5 @@
 <?php
-require_once "./db_password.php";
+require_once "db_password.php";
 
 //error reporting features (very useful)
 ini_set('display_errors','On');

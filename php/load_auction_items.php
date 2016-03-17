@@ -1,5 +1,5 @@
 <?php
-	require_once "./db_password.php";
+	require_once "db_password.php";
 	//include "db_password.php";
 //Connect with Database to get AuctionItem information, including image info to populate main page with auction items to peruse
 

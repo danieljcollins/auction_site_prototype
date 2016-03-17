@@ -1,7 +1,7 @@
 function getUserId(userId){
 	
 	var xhr = new XMLHttpRequest();
-	xhr.open("post", "check_user_id.php", false);	//synchronous because we need this to finish before next ajax call
+	xhr.open("post", "./php/check_user_id.php", false);	//synchronous because we need this to finish before next ajax call
 	xhr.onreadystatechange = function(){
 		if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
 			userId = xhr.responseText;
@@ -19,7 +19,7 @@ function getUserId(userId){
 
 function getUserTransactions(userId){
 	var xhrUser = new XMLHttpRequest();
-	xhrUser.open("post", "view_user.php", false);	//synchronous because we need this to finish before next ajax call
+	xhrUser.open("post", "./php/view_user.php", false);	//synchronous because we need this to finish before next ajax call
 	xhrUser.onreadystatechange = function(){
 		if(xhrUser.readyState == XMLHttpRequest.DONE && xhrUser.status == 200){
 			//document.getElementById("textOutput").innerHTML = xhrUser.responseText;
