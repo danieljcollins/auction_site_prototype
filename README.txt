@@ -7,12 +7,13 @@ The idea behind the project is to create a simple website that allows users to a
 Directory Structure for site:
 
 auction
-    auction/uploads - where user uploads go
-    auction/pictures - where pictures for decorating site go (not currently used)
-    auction/scripts - where javascript files go (might become home for php scripts eventually)
-    auction/ - where php scripts currently live
-    auction/ - where html and css are
-    auction/db_password.php - define $user and $pass as your MySQL/MariaDB user name and password in a simple php file
+	base directory/ - where html and css are located
+    /uploads/ - where user uploads go
+    /pictures/ - where pictures for decorating the site go (not currently used)
+    /js/ - where javascript files go 
+    /php/ - where php scripts currently live
+    /php/db_password.php - define $user and $pass as your MySQL/MariaDB user name and password in a simple php file    
+    
     
 Site Functionality:
 
