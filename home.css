@@ -1,0 +1,171 @@
+body{
+	background-color: rgb(255,255,255);
+}
+
+#header{
+	background-color: #004e7a;
+	color:white;
+	text-align:center;	
+	padding:5px;
+	margin:auto
+	
+}
+
+#loginInput{
+	display:none;
+	background-color: #004e7a;
+	color:white;
+	text-align:center;
+	padding:20px;
+}
+#userInfo{
+	display:none;
+	background-color:#004e7a;
+	color:white;
+	margin:auto;
+	
+	text-align:center;
+	
+}
+#userInfo a{
+	color:white;
+}
+#userInfo a:visited{
+	color:white;
+}
+
+#nav{
+	text-align:center;
+	margin:auto;
+}
+
+ul#menu li{
+	display: inline;	
+	background-color:#004e7a;
+	color: white;
+	padding: 10px;
+	margin: auto;
+	border-radius: 10px;
+}
+
+ul#menu li:hover{
+	background-color: orange;
+}
+
+ul#menu li:hover > a {
+	background-color: orange;
+}
+
+ul#menu li a{
+	background-color:#004e7a;
+	color: white;
+	padding: 10px 20px;
+	/*border-radius: 4px 4px 0 0;*/
+	text-align:center;
+}
+
+ul#menu li a:hover{
+	background-color: orange;
+}
+
+ul#menu li a:hover < li {
+	background-color: orange;
+}
+
+#register{
+	border-style:solid;
+	border-radius:25px;
+	background-color:#cccccc;
+	width:30%;
+	text-align:center;
+	margin:auto;
+	color:black;
+	padding:10px;
+}
+
+.imageTable{	
+	margin:auto;
+}
+
+
+#tTable{
+	text-align:center;
+	color:black;
+	margin:auto;	
+	padding:10px;	
+}
+
+#viewItem{
+	color:black;
+	margin:auto;
+	text-align:center;
+	
+}
+#itemImg{
+	width:500px;
+	height:500px;
+}
+
+#searchTools{
+	background-color: #cccccc;
+	width: 50%;
+	border-radius: 25px;
+	margin:auto;
+	
+
+}
+
+#searchTable{
+	text-align:center;
+	margin:auto;
+	border:5px;	
+}
+
+#searchTable caption{
+	margin-top:10%;
+}
+
+#searchTable th{
+	padding: 30px;
+	
+}
+/*
+#submitSearch{
+	text-align:center;
+	margin:auto;
+}
+
+#submitSearch{
+	margin-bottom:30%;
+}
+*/
+
+#clearSearchButton{
+	width:100%;
+	margin-top:40px;
+	margin-bottom:40px;
+}
+#resultsTable{	
+	width:100%;
+	border-collapse:collapse;
+}
+
+#resultsTable, #resultsTable tr, #resultsTable td{
+	text-align:center;
+	margin:auto;	
+	padding:10px;
+	border:1px solid black;
+}
+
+table#resultsTable td:hover{
+	background:orange;
+}
+
+
+#footer{
+	background-color:rgb(64,64,64);
+	color:white;
+	clear:both;
+	text-align:center;
+	padding:5px;
+}

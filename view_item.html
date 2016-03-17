@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<title>Auctions Online! - View Item Page</title>
+		<link rel="stylesheet" href="home.css">
+		<meta name="keywords" content="HTML, CSS, Javascript">
+		<meta name="description" content="Prototype Auction Website Item View Page">
+		<meta charset="UTF-8">
+		<meta name="author" content="Daniel Collins">	
+			
+		<script src="scripts/manage_logins.js"></script>
+		<script src="scripts/view_item.js"></script>
+	</head>
+	<body onload="checkLoginStatus(); loadItem();">
+		<div id="loginInput">		
+			Username: <input type="text" id="usernameInput">
+			<span id="usernameResponse">*</span>
+			Password: <input type="password" id="passwordInput">
+			<span id="passwordResponse">*</span>
+			<input type="submit" onclick="attemptLogin()" value="Login">		
+		</div>
+		<div id="userInfo">
+			Logged in as: <a href="view_user.html" id="usernameAHREF"></a><span>&emsp;&emsp;</span><a href onclick="logout()">(LOGOUT)</a>	
+		</div>
+		<div id="header">
+			<h1>Auctions Online!</h1>
+		</div>		
+		<div id="nav">
+			<ul id="menu">
+				<li><a href="home.html">HOME</a></li>
+				<li><a href="add_item.html">ADD ITEM</a></li>
+				<li><a href="search_items.html">SEARCH ITEMS</a></li>
+				<li><a href="register.html">REGISTER</a></li>							
+			</form>
+			</ul>
+		</div>
+		<div id="content">
+			<p id="textOutput"></p>
+		</div>		
+		<div id="viewItem">
+			<br />
+			<h1 id="itemName">Item Name</h1>
+			<br />
+			<image id="itemImg">
+			<br />
+			<p id="listPrice">Item Price</p>
+			<br />
+			<p id="itemDescription">Item Description</p>
+			<br />
+			Place Bid: <input type="text" id="bidAmount" /><span> &emsp; </span>
+			<input type="button" id="placeBidButton" value="Place bid" onclick="placeBid()">
+			<p id="debugInfo"></p>
+		</div>
+		<div id="footer"><p>Produced by Dan Collins (2016)</p>
+		</div>
+	</body>
+</html>
+	

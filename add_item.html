@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- COPIED from home.html, consider using php require or SSI config on apache web server -->
+		<title>Auctions Online! - Add Auction Item Page</title>
+		<link rel="stylesheet" href="home.css">
+		<meta name="keywords" content="HTML, CSS, Javascript">
+		<meta name="description" content="Prototype Auction Website add auction item page">
+		<meta charset="UTF-8">
+		<meta name="author" content="Daniel Collins">	
+		
+		<script src="scripts/manage_logins.js"></script>
+		<script src="scripts/add_auction_item.js"></script>
+		
+	</head>
+	<body onload="checkLoginStatus();">
+		<div id="loginInput">		
+			Username: <input type="text" id="usernameInput">
+			<span id="usernameResponse">*</span>
+			Password: <input type="password" id="passwordInput">
+			<span id="passwordResponse">*</span>
+			<input type="submit" onclick="attemptLogin()" value="Login">		
+		</div>
+		<div id="userInfo">
+			Logged in as: <a href="view_user.html" id="usernameAHREF"></a><span>&emsp;&emsp;</span><a href onclick="logout()">(LOGOUT)</a>
+		</div>		
+		<div id="header">
+			<h1>Auctions Online!</h1>
+		</div>
+		
+		<div id="nav">
+			<ul id="menu">
+				<li><a href="home.html">HOME</a></li>
+				<li><a href="add_item.html">ADD ITEM</a></li>
+				<li><a href="search_items.html">SEARCH ITEMS</a></li>
+				<li><a href="register.html">REGISTER</a></li>							
+			</form>
+			</ul>
+		</div>
+		<div id="content">
+			<p id="textOutput"></p>
+		</div>		
+		<div id="register">
+			<br />			
+			Item Name: <input type="text" id="itemName">
+			<span id="itemNameResponse">*</span><br /><br />
+			Item Description: <input type="text" id="itemDescription">
+			<span id="itemDescriptionResponse">*</span><br /><br />
+			List Price: <input type="text" id="listPrice">
+			<span id="listPriceResponse">*</span><br /><br />
+			<br />
+			Upload Item Image: <input type="file" id="fileSelect" name="photos[]" multiple /><!-- <input type="text" id="itemImage"> -->
+			<span id="itemImageResponse">*</span><br /><br />
+						
+			<input type="button" id="submitButton" value="Submit Item" onclick="addItem()">
+			
+			<p id="debugInfo"></p>			
+		</div>
+		<div id="footer">Produced by Dan Collins (2016)</div>
+	</body>
+
+</html>

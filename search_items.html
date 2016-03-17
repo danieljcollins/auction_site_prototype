@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Auctions Online! - Home Page</title>
+		<link rel="stylesheet" href="home.css">
+		<meta name="keywords" content="HTML, CSS, Javascript">
+		<meta name="description" content="Prototype Auction Website Home Page">
+		<meta charset="UTF-8">
+		<meta name="author" content="Daniel Collins">
+		<script src="scripts/manage_logins.js"></script>
+		<script src="scripts/manage_auction_items.js"></script>
+		<script src="scripts/search_items.js"></script>
+	</head>
+	<script src="manage_logins.js"></script>
+	<body onload="checkLoginStatus()">
+		<div id="loginInput">		
+			Username: <input type="text" id="usernameInput">
+			<span id="usernameResponse">*</span>
+			Password: <input type="password" id="passwordInput">
+			<span id="passwordResponse">*</span>
+			<input type="submit" onclick="attemptLogin()" value="Login">		
+		</div>
+		<div id="userInfo">
+			Logged in as: <a href="view_user.html" id="usernameAHREF"></a><span>&emsp;&emsp;</span><a href onclick="logout()">(LOGOUT)</a>	
+			
+		</div>
+		<div id="header">
+			<h1>Auctions Online!</h1>
+		</div>
+		
+		<div id="nav">
+			<ul id="menu">
+				<li><a href="home.html">HOME</a></li>
+				<li><a href="add_item.html">ADD ITEM</a></li>
+				<li><a href="search_items.html">SEARCH ITEMS</a></li>
+				<li><a href="register.html">REGISTER</a></li>			
+			</form>
+			</ul>
+		</div>
+		<div id="searchTools">
+			<table id="searchTable">
+				<caption>Enter search criteria:</caption>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Price</th>
+				<tr>
+					<td><input type="text" id="searchName"></td>
+					<td><input type="text" id="searchDescription"></td>
+					<td><input type="text" id="searchPrice"></td>
+				</tr>
+				<tr>
+					<td><input type="button" id="submitSearchName" value="Search Name" onclick="searchItems('name')"></td>
+					<td><input type="button" id="submitSearchDescription" value="Search Description" onclick="searchItems('description')"></td>
+					<td><input type="button" id="submitSearchPrice" value="Search Price" onclick="searchItems('price')"></td>
+				</tr>
+				<tr>
+					<td colspan="3"><input type="button" id="clearSearchButton" value="Clear Results" onclick="clearSearch(); return false;"></td>
+				</tr>
+			
+			</table>
+		<!-- </div> -->
+		<div id="searchResults">
+			<table id="resultsTable">
+				<caption>Search Results</caption>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Price</th>			
+			</table>
+		</div>
+		<p id="test"></p>		
+		</div>
+		<div id="footer">
+			<p>Produced by Dan Collins (2016)</p>
+		</div>
+	</body>
+</html>

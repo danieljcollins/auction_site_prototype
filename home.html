@@ -1,0 +1,69 @@
+<?php
+	include "login.php";
+?>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Auctions Online! - Home Page</title>
+	<link rel="stylesheet" href="home.css">
+	<meta name="keywords" content="HTML, CSS, Javascript">
+	<meta name="description" content="Prototype Auction Website Home Page">
+	<meta charset="UTF-8">
+	<meta name="author" content="Daniel Collins">
+	<script src="scripts/manage_logins.js"></script>
+	<script src="scripts/manage_auction_items.js"></script>
+</head>
+<body onload="checkLoginStatus(); mainPageImageLoad();">
+	<div id="loginInput">		
+		Username: <input type="text" id="usernameInput">
+		<span id="usernameResponse"></span>
+		Password: <input type="password" id="passwordInput">
+		<span id="passwordResponse"></span>
+		<input type="submit" onclick="attemptLogin()" value="Login">		
+	</div>
+	<div id="userInfo">
+		Logged in as: <a href="view_user.html" id="usernameAHREF"></a><span>&emsp;&emsp;</span><a href onclick="logout()">(LOGOUT)</a>	
+		
+	</div>
+	<div id="header">
+		<h1>Auctions Online!</h1>
+	</div>
+	
+	<div id="nav">
+		<ul id="menu">
+			<li><a href="home.html">HOME</a></li>
+			<li><a href="add_item.html">ADD ITEM</a></li>
+			<li><a href="search_items.html">SEARCH ITEMS</a></li>
+			<li><a href="register.html">REGISTER</a></li>			
+		<!-- </form> -->
+		</ul>
+	</div>
+	<div id="content">
+		<br />
+		<table class="imageTable">
+			<tr>
+				<td><image id="item0" class="displayed" onclick="viewItem(0, 0, 'homepage lookup')" style="width:300px;height:300px;"></td>
+				<td><image id="item1" class="displayed" onclick="viewItem(1, 1, 'homepage lookup')" style="width:300px;height:300px;"></td>
+				<td><image id="item2" class="displayed" onclick="viewItem(2, 2, 'homepage lookup')" style="width:300px;height:300px;"></td>
+				<td><image id="item3" class="displayed" onclick="viewItem(3, 3, 'homepage lookup')" style="width:300px;height:300px;"></td>
+			</tr>
+			<tr>
+				<td><image id="item4" class="displayed" onclick="viewItem(4, 4, 'homepage lookup')" style="width:300px;height:300px;"></td>
+				<td><image id="item5" class="displayed" onclick="viewItem(5, 5, 'homepage lookup')" style="width:300px;height:300px;"></td>
+				<td><image id="item6" class="displayed" onclick="viewItem(6, 6, 'homepage lookup')" style="width:300px;height:300px;"></td>
+				<td><image id="item7" class="displayed" onclick="viewItem(7, 7, 'homepage lookup')" style="width:300px;height:300px;"></td>
+			</tr>
+			<tr>
+				<td><image id="item8" class="displayed" onclick="viewItem(8, 8, 'homepage lookup')" style="width:300px;height:300px;"></td>
+				<td><image id="item9" class="displayed" onclick="viewItem(9, 9, 'homepage lookup')" style="width:300px;height:300px;"></td>
+				<td><image id="item10" class="displayed" onclick="viewItem(10, 10, 'homepage lookup')" style="width:300px;height:300px;"></td>
+				<td><image id="item11" class="displayed" onclick="viewItem(11, 11, 'homepage lookup')" style="width:300px;height:300px;"></td>
+			</tr>
+		</table>
+		<p id="test"></p>
+	</div>
+	<div id="footer">
+		<p>Produced by Dan Collins (2016)</p>
+	</div>
+</body>
+</html>

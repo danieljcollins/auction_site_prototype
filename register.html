@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- COPIED from home.html, consider using php require or SSI config on apache web server -->
+		<title>Auctions Online! - User Registration Page</title>
+		<link rel="stylesheet" href="home.css">
+		<meta name="keywords" content="HTML, CSS, Javascript">
+		<meta name="description" content="Prototype Auction Website User Registration Page">
+		<meta charset="UTF-8">
+		<meta name="author" content="Daniel Collins">
+		<script src="scripts/manage_logins.js"></script>			
+		<script src="scripts/register_user.js"></script>
+	</head>
+	<body onload="checkLoginStatus()">
+		<div id="loginInput">		
+			Username: <input type="text" id="usernameInput">
+			<span id="usernameResponse">*</span>
+			Password: <input type="password" id="passwordInput">
+			<span id="passwordResponse">*</span>
+			<input type="submit" onclick="attemptLogin()" value="Login">		
+		</div>
+		<div id="userInfo">
+			Logged in as: <a href="view_user.html" id="usernameAHREF"></a><span>&emsp;&emsp;</span><a href onclick="logout()">(LOGOUT)</a>	
+			
+		</div>
+		<div id="header">
+			<h1>Auctions Online!</h1>
+		</div>		
+		<div id="nav">
+			<ul id="menu">
+				<li><a href="home.html">HOME</a></li>
+				<li><a href="add_item.html">ADD ITEM</a></li>
+				<li><a href="search_items.html">SEARCH ITEMS</a></li>
+				<li><a href="register.html">REGISTER</a></li>							
+			</form>
+			</ul>
+		</div>					
+		<div id="register">
+			<br />
+			First Name: <input type="text" id="firstName">
+			<span id="firstNameResponse">*</span>
+			<br />
+			<br />
+			Last Name: <input type="text" id="lastName">
+			<span id="lastNameResponse">*</span>
+			<br /><br />
+			E-mail: <input type="text" id="emailAddress">
+			<span id="emailResponse">*</span>
+			<br /><br />
+			User Name: <input type="text" id="userName">
+			<span id="userNameResponse">*</span>
+			<br /><br />
+			Password: <input type="password" id="password">
+			<span id="passwordResponse">*</span>
+			<br /><br />
+			Re-type Password: <input type="password" id="retypePassword">
+			<span id="retypePasswordResponse">*</span>
+			<br /><br />
+			<input type="button" id="submit" value="Submit" onclick="attemptRegistration()">
+			<p id="debugInfo"></p>
+		</div>
+		<div id="content">
+			<p id="test"></p>
+		</div>	
+		<div id="footer">Produced by Dan Collins (2016)
+		</div>
+	</body>
+
+</html>
